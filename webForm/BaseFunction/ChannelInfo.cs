@@ -126,6 +126,9 @@ namespace XkCms.WebForm.BaseFunction
 
 
 
+
+
+
             doh.Reset();
             doh.SqlCmd = "select * from xk_channel where id=" + _id;
             DataTable dt = doh.GetDataTable();
