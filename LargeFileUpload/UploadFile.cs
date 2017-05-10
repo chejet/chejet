@@ -8,7 +8,6 @@ namespace XkCms.LargeFileUpload
 	/// </summary>
 	public class UploadFile
 	{
-
 		#region Properties
 
 		/// <summary>
