@@ -1,0 +1,62 @@
+<html>
+<head>
+{$MY_head区$}
+</head>
+
+<body id="Channel{$ChannelId$}">
+<div id="wrap">
+
+{$MY_网站顶部$}
+<!--[if !IE]>顶部结束<![endif]-->
+<!--[if !IE]> 左边栏开始 <![endif]-->
+  <div class="left">
+    <div class="leftbox_1"><h2>用 户 登 陆</h2></div>
+    <div class="leftbox_2">
+      <div class="login">{$LoginBar$}</div>
+      <div class="leftbox_4"><h2>下 载 排 行</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,3,10,28,0,-1,1,0,0,0)$}</UL></div>
+      <div class="leftbox_4"><h2>推 荐 下 载</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,1,10,28,0,-1,1,0,0,0)$}</UL></div>
+    </div>
+    <div class="leftbox_3"></div>
+  </div>
+<!--[if !IE]> 左边栏结束 <![endif]-->
+ <div id="content"> 
+ <div class="youpath">{$ChannelMenu$}</div>
+<!--[if !IE]> 网站中部开始 <![endif]-->
+	<div class="article_list">
+            <div class="soft_list"><h3>{$Title$}</h3></div>
+            <div class="soft_l">
+				 <div class="yzxx_4">软件版本： {$Version$}</div>
+				 <div class="yzxx_4">类别： {$SType$}</div>
+				 <div class="yzxx_4">语言： {$SLanguage$}</div>
+                 <div class="yzxx_4">运行环境： {$OperatingSystem$}</div>
+                 <div class="yzxx_4">开 发 商： {$Author$}</div>
+                 <div class="yzxx_4">下载统计：{$ViewNum$}</div>
+                 <div class="yzxx_4">更新时间：{$AddDate$}</div>
+            </div>
+            <div class="soft_r"><img class='pic2' src='{$Img$}'  width='172' height='146' border='0'></div>
+            <div class="yzxx_5"><strong>::下载地址::</strong></div>
+            <div class="softdown">
+				{$DownUrl$}
+            </div>
+            <div class="yzxx_5"><strong>::软件简介::</strong></div>
+            <div class="soft_intro">{$Summary$}</div>
+            <div class="yzxx_5"><strong><font color="#009933">::相关软件::</font></strong></div>
+            <div class="soft_intro">{$CorList$}</div>
+            <div class="yzxx_5"><strong>::下载说明::</strong></div>
+            <div class="soft_intro">
+                   <FONT color=#ff0000>·</FONT>本站所提供下载的软件，均来源于互联网，如有侵权行为，请与本站<a href="mailto:xkzi1984#163.com"><font color="#ff0000">管理员</font></a>，联系，我们会第一时间删除！ <BR>
+                   <FONT color=#ff0000>·</FONT>如果您发现该软件不能下载，请通知<a href="mailto:xkzi1984#163.com"><font color="#ff0000">管理员</font></a>，谢谢！ <BR>
+                   <FONT color=#ff0000>·</FONT>未经本站明确许可，任何网站不得非法盗链及抄袭本站资源；如引用页面，请注明来自本站，谢谢您的支持！</td>
+            </div>
+       </div>
+ </div> 
+<!--[if !IE]> 网站中部结束 <![endif]-->
+<!--[if !IE]> 网站底部开始 <![endif]-->
+{$MY_网站底部$}
+</div>
+<div id="footer_1"></div>
+
+</body>
+</html>

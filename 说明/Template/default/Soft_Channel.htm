@@ -1,0 +1,91 @@
+<html>
+<head>
+{$MY_head区$}
+</head>
+
+<body id="Channel{$ChannelId$}">
+<div id="wrap">
+
+{$MY_网站顶部$}
+<!--[if !IE]>顶部结束<![endif]-->
+<!--[if !IE]> 左边栏开始 <![endif]-->
+  <div class="left">
+    <div class="leftbox_1"><h2>用 户 登 陆</h2></div>
+    <div class="leftbox_2">
+      <div class="login">{$LoginBar$}</div>
+      <div class="leftbox_4"><h2>下 载 排 行</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,3,10,28,0,-1,1,0,0,0)$}</UL></div>
+      <div class="leftbox_4"><h2>推 荐 下 载</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,1,10,28,0,-1,1,0,0,0)$}</UL></div>
+	  <div class="leftbox_4"><h2>站 内 调 查</h2></div>
+      <div class="left_content_2">
+		{$Vote$}
+	  </div>
+    </div>
+    <div class="leftbox_3"></div>
+  </div>
+<!--[if !IE]> 左边栏结束 <![endif]-->
+ <div id="content"> 
+ <div class="youpath">{$ChannelMenu$}</div>
+<!--[if !IE]> 网站中部开始 <![endif]-->
+  <div class="center_2">
+       <div class="cbox1">
+	        <div class="cbox_top"></div>
+			<div class="cbox_center">	
+				 <div class="ct2"><h1><a href="{$InstallDir$}{$ChannelDir$}/List.aspx?id=22" title="...更多" target="_blank">实用软件</a></h1></div>
+                 <div class="ct4"><UL>{$GetList({$ChannelId$},21,0,5,24,0,-1,1,0,0,0,)$}</UL></div>
+			</div>
+			<div class="cbox_bottom"></div>
+	   </div>
+	   <div class="cbox2">
+	        <div class="cbox_top"></div>
+			<div class="cbox_center">
+				 <div class="ct2"><h1><a href="{$InstallDir$}{$ChannelDir$}/List.aspx?id=23" title="...更多" target="_blank">娱乐游戏</a></h1></div>
+                 <div class="ct4"><UL>{$GetList({$ChannelId$},22,0,5,24,0,-1,1,0,0,0,)$}</UL></div>
+			</div>
+			<div class="cbox_bottom"></div>
+	   </div>
+	   <div class="cbox1">
+	        <div class="cbox_top"></div>
+			<div class="cbox_center">
+				 <div class="ct2"><h1><a href="{$InstallDir$}{$ChannelDir$}/List.aspx?id=24" title="...更多" target="_blank">专业工具</a></h1></div>
+                 <div class="ct4"><UL>{$GetList({$ChannelId$},23,0,5,24,0,-1,1,0,0,0,)$}</UL></div>			
+			</div>
+			<div class="cbox_bottom"></div>	   
+	   </div>
+  </div>
+  <div class="center_2">
+       <div class="pic_soft_2">
+		 <div class="title_list"><h3><a href="{$InstallDir$}{$ChannelDir$}/List.aspx?id=21" title="...更多" target="_blank">学习教程</a></h3></div>
+		 <div class="article_list_2">
+		 {$GetList({$ChannelId$},20,0,10,40,0,-1,1,0,0,0,)$}
+		 </div>
+       </div>
+  </div>
+  <div class="pic_soft_2">
+		 <div class="title_list"><h3><a href="{$InstallDir$}{$ChannelDir$}/List.aspx?id=25" title="...更多" target="_blank">其它下载</a></h3></div>
+		 <div class="article_list_2">
+		 {$GetList({$ChannelId$},24,0,10,40,0,-1,1,0,0,0,)$}
+		 </div>
+  </div>
+  <div class="pic_soft_2">
+		 <div class="title_list"><h3><a href="{$InstallDir$}{$ChannelDir$}/List.aspx?id=25" title="...更多" target="_blank">网络安全</a></h3></div>
+		 <div class="article_list_2">
+		 {$GetList({$ChannelId$},31,0,10,40,0,-1,1,0,0,0,)$}
+		 </div>
+  </div>
+  <div class="center_2">
+	   <div class="link">
+		   <div class="link1">友情链接说明:&nbsp;&nbsp;我们只接受<font color="#ff0000">页面健康</font>的同类型网站之类的方字链接形式.&nbsp;&nbsp;<a href="{$InstallDir$}FriendLink.aspx">点此申请链接</a>&nbsp;&nbsp;联系QQ:12470788</div>
+		<UL class="FriendLink">{$FriendLink(0,12)$}</UL>
+	  </div>
+  </div>
+ </div> 
+<!--[if !IE]> 网站中部结束 <![endif]-->
+<!--[if !IE]> 网站底部开始 <![endif]-->
+{$MY_网站底部$}
+</div>
+<div id="footer_1"></div>
+
+</body>
+</html>

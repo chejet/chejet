@@ -1,0 +1,63 @@
+<html>
+<head>
+{$MY_head区$}
+</head>
+
+<body id="Channel{$ChannelId$}">
+<div id="wrap">
+
+{$MY_网站顶部$}
+<!--[if !IE]>顶部结束<![endif]-->
+<!--[if !IE]> 左边栏开始 <![endif]-->
+  <div class="left">
+    <div class="leftbox_1"><h2>用 户 登 陆</h2></div>
+    <div class="leftbox_2">
+      <div class="login">{$LoginBar$}</div>
+	  <div class="leftbox_4"><h2>相 关 文 章</h2></div>
+      <div class="left_content"><UL>{$CorList$}</UL></div>
+      <div class="leftbox_4"><h2>推 荐 阅 读</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},{$ColumnId$},1,10,28,0,-1,1,0,0,0)$}</UL></div>
+    </div>
+    <div class="leftbox_3"></div>
+  </div>
+<!--[if !IE]> 左边栏结束 <![endif]-->
+<!--[if !IE]> 右边中栏开始 <![endif]-->
+ <div id="content"> 
+  <div class="youpath">{$ChannelMenu$}</div>
+  <div class="article_list">
+	<div class="title_list"><h3>{$Title$}</h3></div>
+	<div class="yzxx">发布者：[{$Author$}]&nbsp;&nbsp;来源：[{$From$}]&nbsp;&nbsp;浏览：[{$ViewNum$}]&nbsp;&nbsp;评论：[{$ReviewNum$}]&nbsp;&nbsp;</div>
+	<div class="content_zw">
+	{$Content$}
+	</div>
+	<div class="yzxx_2">
+		发 <span>|</span> 表 <span>|</span> 评 <span>|</span> 论
+		<span style=" margin-left:420px;">
+		<a target="_blank" href="{$InstallDir$}{$ChannelDir$}/Review.aspx?id={$Id$}">查看评论</a>&nbsp;
+		<a href="javascript:addFav({$Id$})">加入收藏</a>
+		</span>
+	</div>
+	<div class="yzxx_3">
+		<table cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td align="right"><img alt="" align="absMiddle" src="{$InstallDir$}images/topic_author.gif" /> 笔名：</td>
+				<td><input class="LoginInput" size="42" name="reviewName" id="reviewName" type="text" /></td>
+			</tr>
+			<tr>
+				<td align="right"><img alt="" align="absMiddle" src="{$InstallDir$}images/topic_ping.gif" /> 评论：</td>
+				<td><textarea id="reviewContent" rows="8" cols="40" name="reviewContent"></textarea></td>
+			</tr>
+			<tr>
+				<td align="center" colspan="2"><input class="LoginInput" type="button" id="btnAddReview" onclick="addReview({$Id$})" value="发表评论" /></td>
+			</tr>
+		</table>
+	</div>
+	</div>
+  </div>
+<!--[if !IE]> 网站中部结束 <![endif]-->
+<!--[if !IE]> 网站底部开始 <![endif]-->
+{$MY_网站底部$}
+</div>
+<div id="footer_1"></div>
+</body>
+</html>

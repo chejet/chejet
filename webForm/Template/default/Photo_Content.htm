@@ -1,0 +1,44 @@
+<html>
+<head>
+{$MY_head区$}
+</head>
+
+<body id="Channel{$ChannelId$}">
+<div id="wrap">
+
+{$MY_网站顶部$}
+<!--[if !IE]>顶部结束<![endif]-->
+<!--[if !IE]> 左边栏开始 <![endif]-->
+  <div class="left">
+    <div class="leftbox_1"><h2>用 户 登 陆</h2></div>
+    <div class="leftbox_2">
+      <div class="login">{$LoginBar$}</div>
+      <div class="leftbox_4"><h2>相 关 图 片</h2></div>
+      <div class="left_content"><UL>{$CorList$}</UL></div>
+      <div class="leftbox_4"><h2>图 片 排 行</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,3,10,27,0,-1,1,0,0,0)$}</UL></div>
+      <div class="leftbox_4"><h2>推 荐 图 片</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,1,10,27,0,-1,1,0,0,0)$}</UL></div>
+    </div>
+    <div class="leftbox_3"></div>
+  </div>
+<!--[if !IE]> 左边栏结束 <![endif]-->
+ <div id="content"> 
+ <div class="youpath">{$ChannelMenu$}</div>
+<!--[if !IE]> 网站中部开始 <![endif]-->
+	<div class="article_list">
+	<div class="title_list"><h3>{$Title$}</h3></div>
+	<div class="yzxx">发布者：[{$Author$}]&nbsp;&nbsp;来源：[{$From$}]&nbsp;&nbsp;浏览：[{$ViewNum$}]&nbsp;&nbsp;评论：[{$ReviewNum$}]&nbsp;&nbsp;</div>
+	<div class="content_zw" style="text-align:center">
+	{$Content$}
+	</div>
+	 </div>
+ </div> 
+<!--[if !IE]> 网站中部结束 <![endif]-->
+<!--[if !IE]> 网站底部开始 <![endif]-->
+{$MY_网站底部$}
+</div>
+<div id="footer_1"></div>
+
+</body>
+</html>

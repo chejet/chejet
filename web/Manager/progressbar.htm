@@ -1,0 +1,74 @@
+﻿<script language="javascript">
+function setPgb(pgbValue) 
+{  
+     if ( pgbValue <= 100 )
+     {
+         if (lblObj = document.getElementById("pgbMain_label"))
+
+         {
+              lblObj.innerHTML = pgbValue + "%"; // change the label value
+         } 
+         if ( pgbObj = document.getElementById("pgbMain") )
+
+         {
+             var divChild = pgbObj.children[0];
+              pgbObj.children[0].style.width = pgbValue + "%";
+         }
+     }                                         
+}
+function initPgb(lbl)
+{
+    document.getElementById("pgbName").innerHTML = "当前操作：<span style='color:red'>" + lbl + "</span>";
+    setPgb(0);
+}
+</script>
+
+<html>
+<head>
+<style type="text/css">
+    .bi-loading-status {
+    width:   100%
+    padding: 1px;
+    overflow: hidden;
+    }
+    .bi-loading-status .text {
+    white-space:  nowrap;
+    overflow:     hidden;
+    width:             10%;
+    text-overflow:     ellipsis;
+    padding:      1px; 
+    float: right;
+    color: #ff0000;
+    } 
+
+    .bi-loading-status .progress-bar {
+    border:       1px solid ThreeDShadow;
+    background:   window;
+    height:       16px;
+    width:        88%;
+    padding: 1px;
+    overflow: hidden; 
+    float: left;
+    }
+
+    .bi-loading-status .progress-bar div {
+    background:   Highlight;
+    overflow: hidden;
+    height:       100%;
+    filter:       Alpha(Opacity=0, FinishOpacity=100, Style=1, StartX=0, StartY=0, FinishX=100, FinishY=0);
+    }
+</style>
+
+</head>
+<body>
+    <table border="0" align="center" width="80%" id="progressbar"><tr><td>    
+       <DIV class="bi-loading-status" id="proBar" style="width: 100%;">
+            <DIV style="width:100%" id="pgbName" align="left"></DIV>
+            <DIV class="text" id="pgbMain_label" align="left"></DIV>
+            <DIV class="progress-bar" id="pgbMain" align="left">
+                 <DIV STYLE="WIDTH:10%"></DIV>
+            </DIV>
+       </DIV>
+    </td></tr></table>
+</body>
+</html>

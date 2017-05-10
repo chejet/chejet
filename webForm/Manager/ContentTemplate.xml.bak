@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Templates>
+	<Template title="测试二">
+		<Description>呵呵</Description>
+		<Html><![CDATA[<table cellspacing="1" cellpadding="1" width="200" summary="" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;bbb</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><font color="#ff0000">fff</font></td>
+        </tr>
+        <tr>
+            <td>fgba</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tbody>
+</table>]]></Html>
+	</Template>
+
+</Templates>

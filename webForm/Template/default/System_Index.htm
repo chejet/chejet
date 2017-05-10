@@ -1,0 +1,167 @@
+<html>
+<head>
+{$MY_head区$}
+</head>
+
+<body id="Channel0">
+<div id="wrap">
+
+{$MY_网站顶部$}
+<!--[if !IE]>顶部结束<![endif]-->
+<!--[if !IE]> 左边栏开始 <![endif]-->
+  <div class="left">
+    <div class="leftbox_1"><h2>用 户 登 陆</h2></div>
+    <div class="leftbox_2">
+      <div class="login">{$LoginBar$}</div>
+      <div class="leftbox_4"><h2>图 片 排 行</h2></div>
+      <div class="left_content"><UL>{$GetList(3,0,3,10,30,0,-1,1,0,0,0)$}</UL></div>
+      <div class="leftbox_4"><h2>下 载 排 行</h2></div>
+      <div class="left_content"><UL>{$GetList(2,0,3,10,30,0,-1,1,0,0,0)$}</UL></div>
+	  <div class="leftbox_4"><h2>站 内 搜 索</h2></div>
+      <div class="left_content_2">
+		<FORM METHOD=POST onsubmit="this.action=this.field.options[this.field.selectedIndex].value">
+			<li><input name="keywords" size="23" value='请输入关键字' maxlength='60' onFocus='this.select();' /></li>
+            <li><select name="field">
+				<option value="{$InstallDir$}news/search.aspx">新闻中心</option>
+				<option value="{$InstallDir$}photo/search.aspx">图片搜索</option>
+				<option value="{$InstallDir$}soft/search.aspx">软件下载</option>
+				<option value="{$InstallDir$}Study/search.aspx">学习在线</option>
+				<option value="{$InstallDir$}Culture/search.aspx">文化频道</option>
+				<option value="{$InstallDir$}Person/search.aspx">人物频道</option>
+				<option value="{$InstallDir$}Life/search.aspx">生活频道</option>
+            </select><input type="submit" value="开始搜索" /></li>
+		</FORM>
+      </div>
+      <div class="leftbox_4"><h2>站 内 调 查</h2></div>
+      <div class="left_content_2">
+		{$Vote$}
+      </div>
+      <div class="leftbox_4"><h2>本 站 信 息</h2></div>
+      <div class="left_content_2">
+		文章内容：{$SystemArticleNum$} 篇<BR>
+		图片资源：{$SystemPhotoNum$} 张<BR>
+		下载资源：{$SystemSoftNum$} 个<BR>
+		评论统计：{$SystemReviewNum$} 篇<BR>
+		注册会员：{$SystemRegUser$} 位
+	  </div>
+    </div>
+    <div class="leftbox_3"></div>
+  </div>
+<!--[if !IE]> 左边栏结束 <![endif]-->
+<!--[if !IE]> 右边中栏开始 <![endif]-->
+ <div id="content"> 
+  <div class="center">
+<!--[if !IE]> 选项卡开始 <![endif]-->
+    <div id="tab">
+      <h3 class="up" onclick="go_to(1);">今日建大</h3>
+      <div class="block">
+         <UL>{$GetList(1,1,0,20,30,0,-1,1,0,0,0)$}</UL>
+      </div>
+      <h3 onclick="go_to(2);">学子风采</h3>
+      <div>
+         <UL>{$GetList(1,2,0,20,30,0,-1,1,0,0,0)$}</UL>
+      </div>
+      <h3 onclick="go_to(3);">国内新闻</h3>
+      <div>
+         <UL>{$GetList(1,3,0,20,30,0,-1,1,0,0,0)$}</UL>
+      </div>
+      <h3 onclick="go_to(4);">最新下载</h3>
+      <div>
+         <UL>{$GetList(1,0,0,20,30,0,-1,1,0,0,0)$}</UL>
+      </div>
+      <script type="text/javascript">
+	var h=document.getElementById("tab").getElementsByTagName("h3");
+	var d=document.getElementById("tab").getElementsByTagName("div");
+	function go_to(ao){
+		for(var i=0;i<h.length;i++){
+			if(ao-1==i){
+			h[i].className+=" up";
+			d[i].className+=" block";
+			}
+			else {
+			h[i].className=" ";
+			d[i].className=" ";
+
+			}
+		}
+	}
+	//-->
+	</script>
+    </div>    
+<!--[if !IE]> 选项卡结束 <![endif]-->
+	</div>
+<!--[if !IE]> 网站右边开始 <![endif]-->
+  <div class="right">
+    <div class="rightbox_2">{$FlashNews(0,Photo,20,231,224)$}</div>
+  </div>
+<!--[if !IE]> 网站右边结束 <![endif]-->
+<!--[if !IE]> 网站中部开始 <![endif]-->
+  <div class="center_2">
+       <div class="ct8">
+		{$GetList(8,0,2,5,0,0,-1,1,1,127,120)$}
+       </div>
+       <div class="cbox1">
+	        <div class="cbox_top"></div>
+			<div class="cbox_center">	
+				 <div class="ct2"><h1><a href="{$InstallDir$}Study/List.aspx?id=12" title="...更多" target="_blank">英语在线</a></h1></div>
+                 <div class="ct4"><UL>{$GetList(5,11,0,5,36,0,-1,1,0,0,0)$}</UL></div>
+			</div>
+			<div class="cbox_bottom"></div>
+	   </div>
+	   <div class="cbox2">
+	        <div class="cbox_top"></div>
+			<div class="cbox_center">
+				 <div class="ct2"><h1><a href="{$InstallDir$}Study/List.aspx?id=13" title="...更多" target="_blank">考研助力</a></h1></div>
+                 <div class="ct4"><UL>{$GetList(5,12,0,5,36,0,-1,1,0,0,0)$}</UL></div>
+			</div>
+			<div class="cbox_bottom"></div>
+	   </div>
+	   <div class="cbox1">
+	        <div class="cbox_top"></div>
+			<div class="cbox_center">
+				 <div class="ct2"><h1><a href="{$InstallDir$}Study/List.aspx?id=14" title="...更多" target="_blank">公务员考试</a></h1></div>
+                 <div class="ct4"><UL>{$GetList(5,13,0,5,36,0,-1,1,0,0,0)$}</UL></div>			
+			</div>
+			<div class="cbox_bottom"></div>	   
+	   </div>
+		<div class="ct8">
+		{$GetList(1,0,2,5,0,0,-1,1,1,127,120)$}
+       </div>
+       <div class="cbox1">
+	        <div class="cbox_top"></div>
+			<div class="cbox_center">	
+				 <div class="ct2"><h1><a href="{$InstallDir$}Life/List.aspx?id=7" title="...更多" target="_blank">泉城生活</a></h1></div>
+                 <div class="ct4"><UL>{$GetList(4,6,0,5,36,0,-1,1,0,0,0)$}</UL></div>
+			</div>
+			<div class="cbox_bottom"></div>
+	   </div>
+	   <div class="cbox2">
+	        <div class="cbox_top"></div>
+			<div class="cbox_center">
+				 <div class="ct2"><h1><a href="{$InstallDir$}Life/List.aspx?id=8" title="...更多" target="_blank">精品购物</a></h1></div>
+                 <div class="ct4"><UL>{$GetList(4,7,0,5,36,0,-1,1,0,0,0)$}</UL></div>
+			</div>
+			<div class="cbox_bottom"></div>
+	   </div>
+	   <div class="cbox1">
+	        <div class="cbox_top"></div>
+			<div class="cbox_center">
+				 <div class="ct2"><h1><a href="{$InstallDir$}Life/List.aspx?id=11" title="...更多" target="_blank">生活常识</a></h1></div>
+                 <div class="ct4"><UL>{$GetList(4,10,0,5,36,0,-1,1,0,0,0)$}</UL></div>			
+			</div>
+			<div class="cbox_bottom"></div>	   
+	   </div>
+	   <div class="link">
+		   <div class="link1">友情链接说明:&nbsp;&nbsp;我们只接受<font color="#ff0000">页面健康</font>的同类型网站之类的方字链接形式.&nbsp;&nbsp;<a href="{$InstallDir$}FriendLink.aspx">点此申请链接</a>&nbsp;&nbsp;联系QQ:12470788</div>
+		<UL class="FriendLink">{$FriendLink(0,12)$}</UL>
+	  </div>
+  </div>
+ </div> 
+<!--[if !IE]> 网站中部结束 <![endif]-->
+<!--[if !IE]> 网站底部开始 <![endif]-->
+{$MY_网站底部$}
+</div>
+<div id="footer_1"></div>
+
+</body>
+</html>

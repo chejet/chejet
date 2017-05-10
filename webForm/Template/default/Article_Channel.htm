@@ -1,0 +1,73 @@
+<html>
+<head>
+{$MY_head区$}
+</head>
+
+<body id="Channel{$ChannelId$}">
+<div id="wrap">
+
+{$MY_网站顶部$}
+<!--[if !IE]>顶部结束<![endif]-->
+<!--[if !IE]> 左边栏开始 <![endif]-->
+  <div class="left">
+    <div class="leftbox_1"><h2>用 户 登 陆</h2></div>
+    <div class="leftbox_2">
+      <div class="login">{$LoginBar$}</div>
+      <div class="leftbox_4"><h2>阅 读 排 行</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,3,10,28,0,-1,1,0,0,0)$}</UL></div>
+      <div class="leftbox_4"><h2>推 荐 阅 读</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,1,10,28,0,-1,1,0,0,0)$}</UL></div>
+	  <div class="leftbox_4"><h2>站 内 调 查</h2></div>
+      <div class="left_content_2">
+		{$Vote$}
+	  </div>
+    </div>
+    <div class="leftbox_3"></div>
+  </div>
+<!--[if !IE]> 左边栏结束 <![endif]-->
+ <div id="content"> 
+ <div class="youpath">{$ChannelMenu$}</div>
+<!--[if !IE]> 网站中部开始 <![endif]-->
+<div class="center">
+<!--[if !IE]> 选项卡开始 <![endif]-->
+    <div id="tab">
+      <h3 class="up">最新文章</h3>
+	  <h4></h4>
+      <div class="block">
+         <UL>{$GetList({$ChannelId$},0,0,20,28,0,-1,1,0,0,0)$}</UL>
+      </div>
+    </div>    
+<!--[if !IE]> 选项卡结束 <![endif]-->
+	</div>
+<!--[if !IE]> 网站右边开始 <![endif]-->
+  <div class="right">
+    <div class="rightbox_2">{$FlashNews({$ChannelId$},Article,20,231,224)$}</div>
+  </div>
+  <div class="center_2">
+	   <div class="ct8">
+		{$GetList({$ChannelId$},0,2,5,0,0,-1,1,1,127,120)$}
+       </div>
+	   {$ListLoop(0)$}
+	   <div class="article_list">
+		<div class="title_list"><h3><a href="{$ColumnLink$}" target="_blank">{$ColumnName$}</a></h3></div>
+		<div class="article_list_2">
+		{$GetList({$ChannelId$},{$ColumnId$},0,10,40,0,-1,1,0,0,0,)$}
+		</div>
+	   </div>
+	    {$/ListLoop$}
+  </div>
+  <div class="center_2">
+	   <div class="link">
+		   <div class="link1">友情链接说明:&nbsp;&nbsp;我们只接受<font color="#ff0000">页面健康</font>的同类型网站之类的方字链接形式.&nbsp;&nbsp;<a href="{$InstallDir$}FriendLink.aspx">点此申请链接</a>&nbsp;&nbsp;联系QQ:12470788</div>
+		<UL class="FriendLink">{$FriendLink(0,12)$}</UL>
+	  </div>
+  </div>
+ </div> 
+<!--[if !IE]> 网站中部结束 <![endif]-->
+<!--[if !IE]> 网站底部开始 <![endif]-->
+{$MY_网站底部$}
+</div>
+<div id="footer_1"></div>
+
+</body>
+</html>

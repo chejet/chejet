@@ -1,0 +1,61 @@
+<html>
+<head>
+{$MY_head区$}
+</head>
+
+<body id="Channel{$ChannelId$}">
+<div id="wrap">
+
+{$MY_网站顶部$}
+<!--[if !IE]>顶部结束<![endif]-->
+<!--[if !IE]> 左边栏开始 <![endif]-->
+  <div class="left">
+    <div class="leftbox_1"><h2>用 户 登 陆</h2></div>
+    <div class="leftbox_2">
+     <div class="login">{$LoginBar$}</div>
+     <div class="leftbox_4"><h2>阅 读 排 行</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,3,10,28,0,-1,1,0,0,0)$}</UL></div>
+      <div class="leftbox_4"><h2>推 荐 阅 读</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,1,10,28,0,-1,1,0,0,0)$}</UL></div>
+    </div>
+    <div class="leftbox_3"></div>
+  </div>
+<!--[if !IE]> 左边栏结束 <![endif]-->
+ <div id="content"> 
+ <div class="youpath">{$ChannelMenu$}</div>
+<!--[if !IE]> 网站中部开始 <![endif]-->
+	<div class="article_list">
+	<div class="title_list"><h3>过往专题</h3></div>
+		{$ListLoop$}
+		<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" style="word-break:break-all;Width:fixed" bgcolor="#D2D3D9">
+			<tr bgcolor="#ffffff">
+				<td rowspan="2" width="140" height="112" valign="middle" align="center"><img src="{$Img$}" border="0" width=120 height=90 onload="javascript:check(this,120,90)" onmousemove="javascript:check(this,120,90)"></td>
+				<td height="27">&nbsp;<a href="{$LinkUrl$}" target="_blank">{$Title$}</a></td>
+			</tr>
+			<tr bgcolor="#ffffff">
+				<td height="85" valign="top">{$Info$}</td>
+			</tr>
+		</table>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			<td height="8"></td>
+			</tr>
+		</table>
+		{$/ListLoop$}
+		  <div class="showpage">
+		  <!-- 分页开始 -->
+		  <div class="show_page">
+			{$PageNumNav$}
+		  </div>
+		  <!-- 分页结束 -->
+	  </div>
+	 </div>
+ </div> 
+<!--[if !IE]> 网站中部结束 <![endif]-->
+<!--[if !IE]> 网站底部开始 <![endif]-->
+{$MY_网站底部$}
+</div>
+<div id="footer_1"></div>
+
+</body>
+</html>

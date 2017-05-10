@@ -1,0 +1,1 @@
+﻿document.write("<a href='/'>首页</a> | <a href='/Article/'>文章中心</a>");

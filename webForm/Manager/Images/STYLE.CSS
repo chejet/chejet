@@ -1,0 +1,183 @@
+BODY 
+{
+    scrollbar-face-color: #C7D4F7; 
+    scrollbar-highlight-color: #DEE6FA; 
+	scrollbar-shadow-color: #799AE1; 
+	scrollbar-darkshadow-color: #DEE6FA; 
+	scrollbar-3dlight-color: #DEE6FA; 
+	scrollbar-arrow-color: #fff;
+	scrollbar-track-color: #E4EDF9;
+	FONT-SIZE: 12px; 
+	background:#ced7f7;
+	FONT-FAMILY: "ËÎÌå", "Verdana", "Arial";
+	margin: 0px;
+	padding: 0px;
+}
+TD
+{
+    font-size: 12px;
+}
+input {
+	BORDER-RIGHT: #7f9db9 1px solid;
+	BORDER-TOP: #7f9db9 1px solid;
+	BORDER-LEFT: #7f9db9 1px solid;
+	BORDER-BOTTOM: #7f9db9 1px solid;
+	FONT-SIZE: 12px;
+	BACKGROUND-COLOR:  #f8f8f8;
+}
+.checkbox 
+{
+    border-bottom-style: none;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    width: 14px;
+    height: 14px;
+}
+FIELDSET {
+	BORDER-RIGHT: #c8d9e4 1px solid; 
+	BORDER-TOP: #c8d9e4 1px solid; 
+	BORDER-LEFT: #c8d9e4 1px solid; 
+	BORDER-BOTTOM: #c8d9e4 1px solid;
+}
+LEGEND {
+	FONT-WEIGHT: bold; 
+	COLOR: #000;
+}
+form {
+	margin: 0;
+	padding: 0;
+}
+select, textarea {
+	FONT-SIZE: 12px;
+}
+SPAN {
+	FONT-SIZE: 12px; POSITION: static
+}
+.button {
+	font: bold 11px tahoma,verdana,arial,helvetica,sans-serif;
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+a:hover  { color:#428EFF;text-decoration:underline; }
+A.highlight:link {
+	COLOR: red; TEXT-DECORATION: none
+}
+A.highlight:visited {
+	COLOR: red; TEXT-DECORATION: none
+}
+A.highlight:hover {
+	COLOR: red
+}
+A.thisclass:link {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.thisclass:visited {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.thisclass:hover {
+	FONT-WEIGHT: bold
+}
+A.navlink:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.navlink:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.navlink:hover {
+	COLOR: #003399; TEXT-DECORATION: none
+}
+.twidth {
+	WIDTH: 760px
+}
+.content {
+	FONT-SIZE: 14px; MARGIN: 5px 20px; LINE-HEIGHT: 140%; FONT-FAMILY: Tahoma,å®‹ä½“
+}
+.aTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px
+}
+TD.forumHeaderBackgroundAlternate {
+	BACKGROUND-IMAGE: url(admin_top_bg.gif); COLOR: #000000; BACKGROUND-COLOR: #799ae1
+}
+#TableTitleLink A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#TableTitleLink A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#TableTitleLink A:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#TableTitleLink A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+TH {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(admin_bg_1.gif); COLOR: white; BACKGROUND-COLOR: #4455aa; height:25px;
+}
+TD.bodytitle {
+	BACKGROUND-IMAGE: url(admin_bg_2.gif)
+}
+TD.bodytitle1 {
+	BACKGROUND-IMAGE: url(admin_bg_3.gif)
+}
+TD.tablebody1 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #bebbdb; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+TD.forumRow { BACKGROUND: #F1F3F5; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+TD.forumRowHighlight { BACKGROUND: #E4EDF9; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.tableBorder,.editTable
+{
+	BORDER-RIGHT: #183789 1px solid; BORDER-TOP: #183789 1px solid; BORDER-LEFT: #183789 1px solid; BORDER-BOTTOM: #183789 1px solid; BACKGROUND-COLOR: #ffffff;
+}
+.editTable
+{
+    color: #800000;
+    border-collapse: collapse;
+    background-color: #fff;
+    width: 98%;
+}
+.editTable .tips { color: #000; }
+.TableFooter
+{
+    BORDER-RIGHT: #183789 1px solid; BORDER-LEFT: #183789 1px solid; BORDER-BOTTOM: #183789 1px solid; BACKGROUND-COLOR: #ffffff;
+    font: 11px tahoma,verdana,arial,helvetica,sans-serif;
+	color: #001F30;
+	background-color: #DEE0E2;
+}
+.TableFooter td { text-align: right; }
+.pager 
+{
+    width:auto;border:1px #1C6EAC solid; background-color:#D6E0EF;float:right;margin:2px;
+}
+.pager td { background-color:#FFFFFF; line-height:normal; }
+.pager td.pagerTitle{clear:both;background-color:#1C6EAC;color:#FFFFFF; }
+.pager td.current { color: #f00; }
+.pager a {font-size:12px;color:#333;text-decoration:none;}
+.pager a:hover {font-size:12px;color:#ff3300;text-decoration:underline;}
+.tableBorder tr,.TableFooter tr { height: 22px; }
+.tableBorder1 {WIDTH: 98%; }
+.helplink {
+	FONT: 10px verdana,arial,helvetica,sans-serif; CURSOR: help; TEXT-DECORATION: none
+}
+.copyright {
+	font: 11px verdana,arial,Tahoma;font-weight:bolder ;COLOR:#C0CAD1; PADDING-TOP: 1px;
+}
+.copyright1 {
+	PADDING-RIGHT: 1px; BORDER-TOP: #6595d6 1px dashed; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; FONT: 11px verdana,arial,helvetica,sans-serif; COLOR: #4455aa; PADDING-TOP: 1px; TEXT-DECORATION: none
+}
+.tablefoot {
+	font: 11px tahoma,verdana,arial,helvetica,sans-serif;
+	color: #001F30;
+	border: outset 1px;
+	background-color: #DEE0E2;
+}
+.tdfoot{
+	font: 11px verdana,arial,Tahoma;
+	color: #001F30;
+}

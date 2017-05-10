@@ -1,0 +1,83 @@
+<html>
+<head>
+{$MY_head区$}
+</head>
+
+<body id="Channel{$ChannelId$}">
+<div id="wrap">
+
+{$MY_网站顶部$}
+<!--[if !IE]>顶部结束<![endif]-->
+<!--[if !IE]> 左边栏开始 <![endif]-->
+  <div class="left">
+    <div class="leftbox_1"><h2>用 户 登 陆</h2></div>
+    <div class="leftbox_2">
+      <div class="login">{$LoginBar$}</div>
+      <div class="leftbox_4"><h2>栏 目 导 航</h2></div>
+      <div class="left_content_2">{$ColumnChild$}</div>
+      <div class="leftbox_4"><h2>下 载 排 行</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,3,10,28,0,-1,1,0,0,0)$}</UL></div>
+      <div class="leftbox_4"><h2>推 荐 下 载</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},0,1,10,28,0,-1,1,0,0,0)$}</UL></div>
+    </div>
+    <div class="leftbox_3"></div>
+  </div>
+<!--[if !IE]> 左边栏结束 <![endif]-->
+ <div id="content"> 
+ <div class="youpath">{$ChannelMenu$}</div>
+<!--[if !IE]> 网站中部开始 <![endif]-->
+	<div class="ct8">
+	{$GetList({$ChannelId$},{$ColumnId$},2,5,0,0,-1,1,1,127,120)$}
+   </div>
+  <div class="article_list">
+	<div class="title_list"><h3>{$ColumnName$}</h3></div>
+		<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9999CC">
+		<tr align="center" bgcolor="#D2D3D9">
+			<td width="50%">软件名称</td>
+			<td width="20%">更新日期</td>
+			<td width="10%">软件作者</td>
+			<td width="10%">授权形式</td>
+			<td width="10%">软件版本</td>
+		</tr>
+		</table>
+		{$ListLoop$}
+		<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D2D3D9" style="word-break:break-all;Width:fixed">
+			<tr bgcolor="#ffffff">
+				<td width="50%"><a href="{$LinkUrl$}" target="_blank">{$Title$}</a></td>
+				<td width="20%" align="center">{$AddDate$}</td>
+				<td width="10%" align="center">{$Author$}</td>
+				<td width="10%" align="center">{$CopyrightType$}</td>
+				<td width="10%" align="center">{$Version$}</td>
+			</tr>
+			<tr valign="top" bgcolor="#ffffff">
+			<td height="40" colspan="5">·{$TextSummary(201)$}</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffff">
+			<td><font color="#009900">运行环境：{$OperatingSystem$}</font></td>
+			<td colspan="2"><font color="#009900">软件类别：{$SType$}</font></td>
+			<td colspan="2"><font color="#009900">下载次数：{$ViewNum$}</font></td>
+			</tr>
+		</table>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			<td height="8"></td>
+			</tr>
+		</table>
+		{$/ListLoop$}
+	<div class="showpage">
+		  <!-- 分页开始 -->
+		  <div class="show_page">
+			{$PageNumNav$}
+		  </div>
+		  <!-- 分页结束 -->
+	  </div>
+	 </div>
+ </div> 
+<!--[if !IE]> 网站中部结束 <![endif]-->
+<!--[if !IE]> 网站底部开始 <![endif]-->
+{$MY_网站底部$}
+</div>
+<div id="footer_1"></div>
+
+</body>
+</html>

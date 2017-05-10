@@ -1,0 +1,60 @@
+<div id="nav_1">
+<script language="JavaScript" type="text/JavaScript">  
+ var day=""; 
+ var month=""; 
+ var ampm=""; 
+ var ampmhour=""; 
+ var myweekday=""; 
+ var year=""; 
+ mydate=new Date(); 
+ myweekday=mydate.getDay(); 
+ mymonth=mydate.getMonth()+1; 
+ myday= mydate.getDate(); 
+ myyear= mydate.getYear(); 
+ year=(myyear > 200) ? myyear : 1900 + myyear; 
+ if(myweekday == 0) 
+ weekday=" 星期日 "; 
+ else if(myweekday == 1) 
+ weekday=" 星期一 "; 
+ else if(myweekday == 2) 
+ weekday=" 星期二 "; 
+ else if(myweekday == 3) 
+ weekday=" 星期三 "; 
+ else if(myweekday == 4) 
+ weekday=" 星期四 "; 
+ else if(myweekday == 5) 
+ weekday=" 星期五 "; 
+ else if(myweekday == 6) 
+ weekday=" 星期六 "; 
+ document.write(year+"年"+mymonth+"月"+myday+"日 "+weekday); 
+</script>
+  </div>
+  <div id="navcontainer">
+    <ul id="navlist">
+      <li id="m0"><a href="{$InstallDir$}">首 页</a></li>
+      <li id="m1"><a href="{$InstallDir$}Article">文章中心</a></li>
+      <li id="m2"><a href="{$InstallDir$}Photo">图片中心</a></li>
+      <li id="m3"><a href="{$InstallDir$}Soft">下载中心</a></li>
+    </ul>
+  </div>
+<div id="header">
+    <div id="logo"></div>
+        <div id="banner">
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="570" height="80">
+          <param name="movie" value="{$InstallDir$}images/banner.swf">
+          <param name="quality" value="high">
+          <embed src="{$InstallDir$}images/banner.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="570" height="80"></embed>
+        </object>
+        </div>
+    <div class="leftbannel">
+         <ul>
+            <li><a href="{$InstallDir$}UserBox/Register.aspx" target="_blank">用户注册</a></li>
+            <li><a href="{$InstallDir$}UserBox/Login.aspx" target="_blank">会员登陆</a></li>
+            <li><a href="xkzi1984@163.com" target="_blank">联系我们</a></li>
+         </ul>
+    </div>
+ </div>
+<div class="subnav">
+    <div class="sub_nav">当前位置：{$PageNav$}</div>
+    <div class="sub_nav_1"><MARQUEE onmouseover=this.stop(); onmouseout=this.start(); scrollAmount=4 scrollDelay=150>{$Placard$}</MARQUEE></div>
+</div>

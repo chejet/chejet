@@ -1,0 +1,58 @@
+<html>
+<head>
+{$MY_head区$}
+</head>
+
+<body id="Channel{$ChannelId$}">
+<div id="wrap">
+
+{$MY_网站顶部$}
+<!--[if !IE]>顶部结束<![endif]-->
+<!--[if !IE]> 左边栏开始 <![endif]-->
+  <div class="left">
+    <div class="leftbox_1"><h2>用 户 登 陆</h2></div>
+    <div class="leftbox_2">
+      <div class="login">{$LoginBar$}</div>
+	  <div class="leftbox_4"><h2>栏 目 导 航</h2></div>
+      <div class="left_content_2">{$ColumnChild$}</div>
+      <div class="leftbox_4"><h2>阅 读 排 行</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},{$ColumnId$},3,10,28,0,-1,1,0,0,0)$}</UL></div>
+      <div class="leftbox_4"><h2>推 荐 阅 读</h2></div>
+      <div class="left_content"><UL>{$GetList({$ChannelId$},{$ColumnId$},1,10,28,0,-1,1,0,0,0)$}</UL></div>
+    </div>
+    <div class="leftbox_3"></div>
+  </div>
+<!--[if !IE]> 左边栏结束 <![endif]-->
+<!--[if !IE]> 右边中栏开始 <![endif]-->
+ <div id="content"> 
+  <div class="youpath">{$ChannelMenu$}</div>
+  <div class="ct8">
+	{$GetList({$ChannelId$},{$ColumnId$},2,5,0,0,-1,1,1,127,120)$}
+  </div>
+  <div class="article_list">
+	<div class="title_list"><h3>{$ColumnName$}</h3></div>
+	<div class="article_list_1">
+         <table border="0" width="100%">
+	  {$ListLoop$}
+             <tr>
+               <td><a href="{$LinkUrl$}" target="_blank">{$Title$}</a>&nbsp;&nbsp;{$AddDate$}</td>
+             </tr>
+           {$/ListLoop$}
+         </table>
+	</div>
+	<div class="showpage">
+		  <!-- 分页开始 -->
+		  <div class="show_page">
+			{$PageNumNav$}
+		  </div>
+		  <!-- 分页结束 -->
+	  </div>
+	 </div>
+  </div>
+<!--[if !IE]> 网站中部结束 <![endif]-->
+<!--[if !IE]> 网站底部开始 <![endif]-->
+{$MY_网站底部$}
+</div>
+<div id="footer_1"></div>
+</body>
+</html>

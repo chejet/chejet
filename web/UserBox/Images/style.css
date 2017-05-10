@@ -1,0 +1,192 @@
+A { 
+	color:#000000; text-decoration:none; 
+}
+A:hover { 
+	color:#384780; TEXT-DECORATION: underline
+}
+A.showmeun {
+	color:blue; text-decoration:none; 
+}
+A.showmeun:hover {
+	color:#FF8E20; TEXT-DECORATION: underline
+}
+A.showtitle {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+A.showtitle:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+body 
+{
+	font-size: 12px;
+	color: #000000;
+	font-family: 宋体;
+	background-color: #F9F9F9;
+	scrollbar-face-color: #f6f6f6;/*滚动条凸出部分的颜色*/
+	scrollbar-highlight-color: #ffffff;/*滚动条空白部分的颜色*/
+	scrollbar-shadow-color: #cccccc;/*立体滚动条阴影的颜色*/
+	scrollbar-3dlight-color: #cccccc;/*滚动条亮边的颜色*/
+	scrollbar-arrow-color: #330000;/*上下按钮上三角箭头的颜色*/
+	scrollbar-track-color: #fefefe;/*滚动条的背景颜色*/
+	scrollbar-darkshadow-color: #ffffff;/*滚动条强阴影的颜色*/
+
+}
+td{
+	Font-family:宋体; Font-size: 12px; Line-height: 20px; Line-height: 150%;Table-layout:Fixed;Word-break:Break-all
+}
+input {
+	Font-family:Verdana, Arial, Helvetica, Sans-serif,宋体; Text-decoration: None; border: 1px solid #606060; Font-size: 12px;
+}
+option {
+	Font-family:Verdana, Arial, Helvetica, Sans-serif,宋体; Text-decoration: None; Border-top-width: 1px; Border-left-width: 1px; Font-size: 12px; Border-bottom-width: 1px; Border-right-width: 1px
+}
+textarea {
+	Font-family:Verdana, Arial, Helvetica, Sans-serif,宋体; Text-decoration: None; Border-top-width: 1px; Border-left-width: 1px; Font-size: 12px; Border-bottom-width: 1px; Border-right-width: 1px
+}
+select {
+	Font-family:Verdana, Arial, Helvetica, Sans-serif,宋体; Border-top-width: 1px; Border-left-width: 1px; Font-size: 12px; Border-bottom-width: 1px; Border-right-width: 1px
+}
+span {
+	Font-family:Verdana, Arial, Helvetica, Sans-serif,宋体; Font-size: 12px; Position: Static
+}
+.UserLeft {
+	border-collapse: collapse; background:#F7F7F7; border-right: 1px solid #DDDDDD;padding-left: 15px;
+}
+.UserRight {
+	border-collapse: collapse; background:#FFFFFF; border-left: 1px solid #DDDDDD;
+}
+.UserTableRow1 {
+	background-color:#F7F7F7;
+}
+.UserTableRow2 {
+	background-color:#F0F0F0;
+}
+.UserTableBorder {
+	border: 1px #596A7E solid ; 
+	background-color: #FFFFFF;
+	font: 12px;
+	width: 96%
+}
+.UserTableBorder .title 
+{
+    text-indent: 20px;
+    font-weight: bold;
+    background-color:#F0F0F0;
+}
+.UserTableBorder .oper
+{
+    background-color:#F7F7F7;
+}
+th
+{
+    background-color: #596A7E;
+    color: white;
+    font-size: 12px;
+    font-weight:bold;
+    height: 25;
+}
+.userfont1 {
+	color:red;
+}
+.userfont2 {
+	color:#596A7E;
+}
+.userfont3 {
+	color:green;
+}
+
+/*UBBeditor 样式*/
+/*-------------------------------------------------*/
+#editorbody{
+	background-color: #f7f7f7;
+	border-width:1px;
+	border-style:solid;
+	border-color:#ffffff #696969 #696969 #ffffff;
+}
+#editorHead{
+	padding:1px 6px 1px 6px;
+}
+.editorTools{
+
+}
+
+.Toolsbar{
+	background: url(../../images/pic/bar.gif) no-repeat 2px 5px;
+	padding-left:8px;
+	height:24px;
+	float:left;
+}
+.ToolsUL{
+	display:inline;
+	list-style:none;
+	margin:0px;
+	padding:1px;
+}
+.ToolsUL Li{ 
+	float:left;
+	padding:1px;
+}
+.ToolsUL Li select{ 
+	font-size:12px;
+}
+
+.Toolsbutton:link,.Toolsbutton:visited{
+	border:1px solid #c6c3bd;
+	width:18px;
+	height:18px;
+	display:block;
+	padding:2px;
+	background: #efefef url(../../images/pic/toolbar.buttonbg.gif) repeat-x;
+	/*opacity: 0.70;
+	filter: alpha(opacity=70);*/
+}
+.Toolsbutton:hover{
+	background:#C1D2EE;
+	border:1px solid #316AC5;
+}
+.Smilie:link,.Smilie:visited{
+	border:1px solid #fff;
+	display:block;
+	padding:2px;
+	width:19px;
+	height:19px;
+}
+.Smilie:hover{
+	background:#C1D2EE;
+	border:1px solid #316AC5;
+}
+.UBBSmiliesPanel{
+	background:#fff;
+	border:1px solid #000;
+	text-align:left;
+	padding:0px;
+	position: absolute;
+	visibility:hidden;
+}
+.editorContent{
+	width:100%;
+	padding:0px 6px 6px 4px !important;
+	padding:0px 4px 6px 4px;
+	text-align:center;
+}
+.editTextarea{
+	border:1px solid #999;
+	font-size:12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding:1px;
+	overflow:auto;
+    width:96%;
+	text-align:left;
+}
+.ToolsUL li {
+	font-size:12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+/*-------------------------------------------------*/
+.UBBContainer{border:1px solid #ccc;background:#f7f7f7;border-left:3px solid;}
+.UBBTitle{font-weight:bold;padding:4px;background:#eee;border-bottom:1px dotted #ccc;}
+.UBBContent{padding:6px;line-height:160%;}
+.UBBContent textarea {width:550px;margin-bottom:2px;}

@@ -1,0 +1,1 @@
+<%@ Page language="c#" Inherits="XkCms.WebForm.Editor.FileBrowserConnector" AutoEventWireup="false" %>

@@ -1,0 +1,44 @@
+<HTML>
+	<HEAD>
+		<title>${UploadProgress}$ %----文件上传</title>
+		<META http-equiv=Content-Type content="text/html; charset=gb2312">
+		<style> TD { FONT-SIZE: 10pt; FONT-FAMILY: verdana;FONT-WEIGHT:bold; }
+	</style>
+	</HEAD>
+	<body bgcolor="buttonface" rightMargin="20" leftMargin="20" bottomMargin="10" topMargin="10"  oncontextmenu="self.event.returnValue=false" style="cursor:default;BORDER-TOP-STYLE:none;BORDER-RIGHT-STYLE:none;BORDER-LEFT-STYLE:none;BORDER-BOTTOM-STYLE:none">
+		${Refresh}$		
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+				<tr>
+					<td height="8"></td>
+				</tr>
+				<tr>
+					<td><table width="100%" height="10" border="0" cellspacing="0" cellpadding="0" align="center">
+        <TR>
+          <TD height=22>状态:${status}$(${UploadProgress}$ %)</TD></TR>
+        <TR>
+          <TD height=22>文件名:${FileName}$</TD></TR>
+        <TR>
+          <TD height=15>
+            <TABLE 
+            style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #999999 1px outset; BORDER-LEFT: #999999 1px outset; BORDER-BOTTOM: #ffffff 1px solid" 
+            height="100%" cellSpacing=0 cellPadding=1 width="100%" align=center 
+            border=0>
+              <TR>
+                <TD bgColor="highlight" width="${UploadProgress}$%" ></TD>
+                <TD width="${SurplusProgress}$%"></TD></TR></TABLE></TD></TR>
+        <TR>
+          <TD height=22>速度:${UploadSpeed}$</TD></TR>
+        <TR>
+          <TD height=22>剩余时间:${LeftTime}$</TD></TR>
+					</table>
+					</td>
+				</tr>
+				<tr>
+					<td height="40" align="right">
+						<INPUT type="button" value=" 确定 " ${BtnOK}$ >&nbsp;&nbsp;
+						<INPUT type="button" value=" 取消 " ${BtnCancel}$>
+					</td>
+				</tr>
+			</table>${Script}$
+	</body>
+</HTML>
